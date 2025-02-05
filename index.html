@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Reid's Music">
+    <meta property="og:description" content="Electronic beats hotter than Venus. DM for booking.">
+    <meta property="og:image" content="https://yourwebsite.com/preview.jpg">
+    <meta property="og:url" content="https://reidvanatta.com">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Reid Vanatta - Music</title>
     <style>
         body {
-            font-family: "Helvetica", monospace;
+            font-family: "Helvetica";
             background: #000;
             color: #fff;
             text-align: center;
@@ -16,6 +22,7 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
+            padding: 10px;
         }
         h1, h2 {
             margin-bottom: 10px;
@@ -39,9 +46,23 @@
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
+             display: block;
+            margin-bottom: 10px;
+            transition: color 0.2s, transform 0.2s;
         }
         .links a:hover {
             text-decoration: underline;
+            color: #ff4d4d;
+            transform: scale(1.1);
+        }
+        .song-list {
+            text-align: center;
+        }
+        .song-list li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
     </style>
 </head>
@@ -56,9 +77,19 @@
             <a href="https://www.youtube.com/watch?v=A0lfo_60h90" target="_blank">BANGER</a>
         </div>
         <h3> ⬇︎ Beats Hotter Than Venus ⬇︎ </h3>
-<ul class="song-list">
-    <li><a href="music/knowb4.mp3">Know b4</a></li>
-    <li><a href="music/icantsleep.mp3">I can't sleep</a></li>
-</ul>
+        <li>
+        Know b4
+        <audio controls>
+            <source src="music/knowb4.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        </li>
+        <li>
+        I Can't Sleep
+        <audio controls>
+            <source src="music/icantsleep.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        </li>
 </body>
 </html>
