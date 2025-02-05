@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ried Vanatta - Music</title>
+    <style>
+        body {
+            font-family: "Helvetica", monospace;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        .song-list {
+            list-style: none;
+            padding: 0;
+        }
+        .song-list li {
+            padding: 10px;
+            border-bottom: 1px solid #555;
+        }
+        .song-list li:last-child {
+            border-bottom: none;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RIED VANATTA</h1>
+        <h2>America, A Country on Earth</h2>
+        <h3>Tracklist</h3>
+        <ul class="song-list" id="songList"></ul>
+        <div class="links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    <script>
+        async function loadSongs() {
+            try {
+                let response = await fetch("/music"); // Endpoint to fetch mp3 files
+                let files = await response.json();
+                let songList = document.getElementById("songList");
+                files.forEach(file => {
+                    let li = document.createElement("li");
+                    li.textContent = file.replace(/.mp3$/, "");
+                    songList.appendChild(li);
+                });
+            } catch (error) {
+                console.error("Error loading songs:", error);
+            }
+        }
+        loadSongs();
+    </script>
+</body>
+</html>
