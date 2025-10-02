@@ -1,2 +1,6 @@
 # website
-Links to my important things
+Links to my music
+
+Information on my shows
+
+Connections to Social Media
