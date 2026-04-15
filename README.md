@@ -1,6 +1,6 @@
 # website
-Links to my music
+Links to all the things im working on
 
-Information on my shows
+reidvanatta.com
 
-Connections to Social Media
+contact@reidvanatta.com
